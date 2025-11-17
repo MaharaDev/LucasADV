@@ -24,4 +24,4 @@ Este site foi desenvolvido com foco em **performance, design responsivo** e **ca
 
 Este projeto está hospedado gratuitamente utilizando o **GitHub Pages**.
 
-**Link do Site Publicado:** [Insira o link do GitHub Pages aqui após a publicação]
+**Link do Site Publicado:** (https://maharadev.github.io/LucasADV/)
