@@ -1,0 +1,440 @@
+:root {
+    --primary-color: #3C1F1F;
+    --secondary-color: #D4A74F;
+    --text-color: #222;
+    --light-text-color: #fff;
+    --accent-text-color: #8C3030;
+    --grey-bg: #f8f8f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--light-text-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.title-serif {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--accent-text-color);
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1em;
+}
+
+.cta-header-btn-lehmann,
+.cta-principal-btn-lehmann,
+.cta-submit-btn-lehmann {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--secondary-color);
+    transition: all 0.3s ease;
+    border-radius: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.cta-header-btn-lehmann:hover,
+.cta-principal-btn-lehmann:hover,
+.cta-submit-btn-lehmann:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.hero-lehmann {
+    background: var(--primary-color) url('hero-background.jpg') no-repeat center center/cover;
+    position: relative;
+    z-index: 1;
+    padding: 15px 0 100px;
+}
+
+.hero-lehmann::before {
+    content: '';
+    position: absolute;
+    top: 5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(60, 31, 31, 0.9);
+    z-index: -1;
+}
+
+.navbar-lehmann {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.logo-lehmann {
+    display: inline-block;
+    max-width: 350px;
+    height: auto;
+    text-decoration: none;
+}
+
+.logo-lehmann img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-content-lehmann {
+    text-align: center;
+    color: var(--light-text-color);
+    padding-top: 80px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content-lehmann h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: var(--secondary-color);
+}
+
+.hero-content-lehmann p {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ANIMAÇÃO SUAVE */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* SEÇÃO APRESENTAÇÃO */
+.service-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    padding: 30px 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--secondary-color);
+}
+
+.service-card i {
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: var(--accent-text-color);
+}
+
+/* BLOCOS DE CONTEÚDO */
+.block-section {
+    padding: 100px 0;
+}
+
+.grey-bg {
+    background-color: var(--grey-bg);
+}
+
+.content-block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+}
+
+.block-image {
+    flex: 1;
+}
+
+.block-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.block-text {
+    flex: 1;
+}
+
+.block-text p {
+    margin-bottom: 20px;
+}
+
+.block-text ul {
+    list-style: none;
+}
+
+.block-text ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.block-text ul li i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.link-saiba-mais {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--accent-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-text-color);
+    padding-bottom: 3px;
+    transition: color 0.3s;
+}
+
+.link-saiba-mais:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* FORMULÁRIO DE CONTATO */
+.contact-form-lehmann {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+.contact-form-lehmann .title-serif,
+.contact-form-lehmann p {
+    color: var(--light-text-color);
+}
+
+.form-clean {
+    max-width: 500px;
+    margin: 40px auto 0;
+}
+
+.form-clean input[type="text"],
+.form-clean input[type="tel"],
+.form-clean textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
+    font-size: 1em;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.form-clean textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.cta-submit-btn-lehmann {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* RODAPÉ */
+.footer-lehmann {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 3px solid var(--secondary-color);
+}
+
+.footer-lehmann .disclaimer {
+    margin-top: 10px;
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+/* BOTÃO FLUTUANTE */
+.cta-header-btn-lehmann {
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.cta-header-btn-lehmann.sticky-cta-visible {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 1;
+    transform: scale(1.05);
+    padding: 15px 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* RESPONSIVO */
+@media (max-width: 850px) {
+    .content-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-block.reverse {
+        flex-direction: column;
+    }
+
+    .block-image {
+        margin-bottom: 30px;
+    }
+
+    .hero-content-lehmann h1 {
+        font-size: 2.2em;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .block-text ul {
+        padding-left: 20px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 550px) {
+    .navbar-lehmann {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo-lehmann {
+        max-width: 180px;
+    }
+
+    .cta-header-btn-lehmann {
+        width: 100%;
+    }
+
+    .hero-content-lehmann h1 {
+        font-size: 1.6em;
+    }
+}
+.testimonials-carousel {
+  background-color: var(--grey-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+  min-width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-left: 5px solid var(--secondary-color);
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: var(--accent-text-color);
+}
+
+.stars {
+  color: #FFD700;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.carousel-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.carousel-controls button {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+@media (max-width: 600px) {
+  .testimonial-card {
+    padding: 20px 15px;
+  }
+
+  .testimonial-text {
+    font-size: 1em;
+  }
+}
