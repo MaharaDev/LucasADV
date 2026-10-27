@@ -1,0 +1,11 @@
+# Dependencies and local tooling
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+
+# Internal installation notes (administrative Google links)
+integracoes/avaliacoes/INSTALADO.md
